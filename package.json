@@ -1,0 +1,30 @@
+{
+  "name": "qolqe-g5-pruebas",
+  "version": "1.0.0",
+  "description": "Pruebas de API del G5 (Límites) con Playwright + playwright-bdd",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "bddgen && playwright test",
+    "report": "playwright show-report",
+    "contrato": "bash scripts/contrato.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjudihtroj/qolqe-wallet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjudihtroj/qolqe-wallet/issues"
+  },
+  "homepage": "https://github.com/cjudihtroj/qolqe-wallet#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "playwright-bdd": "^9.2.1"
+  }
+}

@@ -6,3 +6,9 @@ datos/
 .coverage
 htmlcov/
 reportes/
+
+node_modules/
+.features-gen/
+playwright-report/
+test-results/
+reportes/

@@ -1,0 +1,34 @@
+name: Pruebas de API
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m venv .venv && .venv/bin/pip install -r requirements-pruebas.txt
+      - run: npm ci
+      - name: Escenarios Gherkin (Playwright + playwright-bdd)
+        run: npm test
+      - name: Contrato (Schemathesis)
+        run: |
+          .venv/bin/python -m uvicorn qolqe.main:app --port 8000 &
+          sleep 10
+          PATH="$PWD/.venv/bin:$PATH" npm run contrato
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reportes
+          path: |
+            playwright-report/
+            reportes/

@@ -1,0 +1,2 @@
+-r requirements.txt
+schemathesis>=4.0
