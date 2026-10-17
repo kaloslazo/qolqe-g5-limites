@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G5 · Límites · Parte 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafafa; --card: #ffffff; --ink: #121316; --muted: #5d6068; --line: #dcdde2; --soft: #f0f1f3;
+    --code: #1e1f24; --code-hl: #2b3142;
+    --red: #d9483f; --yellow: #a87c00; --blue: #2f6fd1; --green: #2f8f5b;
+    --dot-red: #e5534b; --dot-yellow: #f2c230; --dot-blue: #3b7ddd; --dot-green: #4cae72;
+    --sans: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #e9eaed; font-family: var(--sans); color: var(--ink); }
+  body { overflow: hidden; }
+  .deck { position: absolute; top: 50%; left: 50%; width: 1600px; height: 900px; transform-origin: center center; }
+  .slide { position: absolute; inset: 0; width: 1600px; height: 900px; background: var(--bg); padding: 80px 96px 96px; display: none; flex-direction: column; }
+  .slide.activa { display: flex; }
+  .pie { position: absolute; left: 96px; right: 96px; bottom: 40px; display: flex; justify-content: space-between; font-size: 18px; color: var(--muted); }
+
+  .seccion { font-size: 22px; font-weight: 600; margin-bottom: 14px; }
+  .s1 { color: var(--blue); } .s2 { color: var(--green); } .s3 { color: var(--yellow); } .s4 { color: var(--red); }
+  h1 { font-size: 60px; line-height: 1.08; font-weight: 600; letter-spacing: -0.02em; }
+  h2 { font-size: 30px; font-weight: 600; margin-bottom: 14px; }
+  .cuerpo { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  p, li { font-size: 27px; line-height: 1.42; }
+  .tenue { color: var(--muted); }
+  .nota { font-size: 23px; color: var(--muted); line-height: 1.4; }
+  ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  ul li { position: relative; padding-left: 30px; }
+  ul li::before { content: "–"; color: var(--muted); position: absolute; left: 0; }
+  code, .mono { font-family: var(--mono); font-size: 0.86em; }
+  .col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .col3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; align-items: stretch; }
+  .tarjeta { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 30px 32px; }
+  .tarjeta li, .tarjeta p { font-size: 24px; }
+  .tinte-azul { background: #edf3fc; border-color: #d3e1f6; }
+  .tinte-verde { background: #edf6f0; border-color: #d2e8da; }
+  .tinte-rojo { background: #fbefee; border-color: #f1d6d3; }
+  .tinte-amarillo { background: #fbf5e3; border-color: #efe2b8; }
+
+  table.compacta th, table.compacta td { padding: 10px 18px; font-size: 21px; }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--card); }
+  th, td { text-align: left; padding: 14px 20px; font-size: 22px; line-height: 1.3; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--soft); font-weight: 600; }
+  tr > :last-child { border-right: 0; }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.n { white-space: nowrap; }
+  .ok { color: var(--green); font-weight: 500; }
+  .mal { color: var(--red); font-weight: 500; }
+
+  pre { background: var(--code); color: #e8e9ee; border-radius: 16px; padding: 26px 28px; font-family: var(--mono); font-size: 22px; line-height: 1.6; white-space: pre; overflow: hidden; }
+  pre .l { display: block; padding: 0 10px; margin: 0 -10px; border-radius: 6px; }
+  pre .hl { background: var(--code-hl); }
+  .k { color: #ff7a72; } .t { color: #6fd39b; } .s { color: #f5cd5b; } .v { color: #b9a3ff; } .f { color: #86b4ff; } .c { color: #8b8e99; }
+  .etiqueta-archivo { font-size: 20px; color: var(--muted); margin-bottom: 10px; }
+
+  .cadena { display: flex; align-items: stretch; gap: 0; }
+  .eslabon { flex: 1; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+  .eslabon small { display: block; font-size: 17px; color: var(--muted); margin-bottom: 6px; }
+  .eslabon b { display: block; font-size: 21px; font-weight: 600; line-height: 1.3; }
+  .eslabon span { display: block; font-size: 19px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+  .flecha { display: flex; align-items: center; padding: 0 10px; font-size: 26px; color: var(--muted); }
+  .fila-titulo { font-size: 21px; font-weight: 600; margin-bottom: 12px; }
+
+  .cifras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .cifra { border-radius: 16px; padding: 34px 36px; border: 1px solid var(--line); background: var(--card); }
+  .cifra b { display: block; font-size: 110px; line-height: 1; font-weight: 600; letter-spacing: -0.03em; }
+  .cifra span { display: block; font-size: 25px; margin-top: 14px; line-height: 1.35; }
+
+  .pasos { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+  .paso { display: grid; grid-template-columns: 70px 1fr; gap: 10px; align-items: start; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 28px; }
+  .paso .num { font-size: 40px; font-weight: 600; line-height: 1; }
+  .paso h2 { margin-bottom: 8px; }
+  .paso p { font-size: 24px; }
+  .paso pre { font-size: 21px; padding: 12px 18px; margin: 6px 0 8px; display: inline-block; }
+
+  .portada { justify-content: space-between; }
+  .puntos { display: flex; gap: 12px; }
+  .puntos i { width: 16px; height: 16px; border-radius: 50%; display: block; }
+  .portada h1 { font-size: 132px; letter-spacing: -0.035em; margin: 10px 0 26px; }
+  .portada .sub { font-size: 36px; color: #3b3e45; line-height: 1.35; }
+
+  @media print {
+    @page { size: 1600px 900px; margin: 0; }
+    html, body { background: var(--bg); overflow: visible; }
+    .deck { position: static; transform: none !important; width: auto; height: auto; }
+    .slide { position: relative; display: flex !important; break-after: page; page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide portada">
+  <div class="puntos"><i style="background:var(--dot-red)"></i><i style="background:var(--dot-yellow)"></i><i style="background:var(--dot-blue)"></i><i style="background:var(--dot-green)"></i></div>
+  <div>
+    <p class="tenue" style="font-size:26px">CS5383 · Proyecto 2 · Parte 1</p>
+    <h1>G5 · Límites</h1>
+    <p class="sub">Límite diario y alertas de consumo,<br>probados por API con Playwright y Gherkin</p>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:26px"><b style="font-weight:500">Kalos · Gianpier</b><span class="tenue">UTEC · 2026-2</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <h1>Cuatro partes, en el orden pedido</h1>
+  <div class="cuerpo">
+    <div class="col2" style="gap:28px">
+      <div class="tarjeta"><p class="seccion s1">1 · Herramienta</p><p>Playwright con playwright-bdd: enfoque, instalación, ejecución y por qué la elegimos</p></div>
+      <div class="tarjeta"><p class="seccion s2">2 · Módulo</p><p>G5: límite diario y alertas de consumo, sus 8 historias y su prioridad</p></div>
+      <div class="tarjeta"><p class="seccion s3">3 · Diseño de casos</p><p>Trazabilidad, casos funcionales, casos técnicos y contrato con Schemathesis</p></div>
+      <div class="tarjeta"><p class="seccion s4">4 · Demo y resultados</p><p>Los 108 escenarios en vivo, el reporte y los 9 defectos encontrados</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <p class="seccion s1">1 · Herramienta</p>
+  <h1>Un solo runner para la API y la web</h1>
+  <div class="cuerpo">
+    <div class="col2">
+      <div>
+        <h2>Enfoque</h2>
+        <p>Playwright Test trae su propio cliente HTTP (<code>request</code>). Con playwright-bdd, cada <code>.feature</code> de Gherkin se convierte en un test de Playwright.</p>
+        <p class="nota" style="margin-top:22px">Primero lo implementamos con pytest-bdd. Lo cambiamos para usar una sola herramienta en las tres partes del proyecto.</p>
+      </div>
+      <div class="tarjeta tinte-azul">
+        <h2>Por qué la elegimos</h2>
+        <ul>
+          <li>Un solo runner para la API y la web</li>
+          <li>Ejecuta Gherkin: el caso de negocio es el test</li>
+          <li>Levanta la app antes de probar (<code>webServer</code>)</li>
+          <li>Deja reporte HTML y JUnit para el CI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <p class="seccion s1">1 · Herramienta</p>
+  <h1>Cada paso del escenario es una función</h1>
+  <div class="cuerpo">
+    <div class="col2" style="gap:28px">
+      <div>
+        <p class="etiqueta-archivo">features/limites.feature</p>
+<pre><span class="l"><span class="t">@HU-G5-02 @api</span></span><span class="l"><span class="k">Scenario Outline:</span> Nuevo límite</span><span class="l"><span class="k">Given</span> que inicié sesión como Ana</span><span class="l hl"><span class="k">When</span> cambio mi límite diario a S/ <span class="v">&lt;limite&gt;</span></span><span class="l"><span class="k">Then</span> el resultado es <span class="s">"&lt;resultado&gt;"</span></span><span class="l"><span class="k">Examples:</span></span><span class="l"><span class="c">  | limite | resultado       |</span></span><span class="l">  | 50     | LIMITE_INVALIDO |</span></pre>
+      </div>
+      <div>
+        <p class="etiqueta-archivo">tests/api-playwright/pasos.ts</p>
+<pre><span class="l"><span class="f">When</span>(</span><span class="l hl">  <span class="s">'cambio mi límite diario a S\\/ {word}'</span>,</span><span class="l">  <span class="k">async</span> ({ sesion }, limite) =&gt; {</span><span class="l">    sesion.respuesta =</span><span class="l">      <span class="k">await</span> sesion.<span class="f">api</span>(<span class="s">'put'</span>,</span><span class="l">        <span class="s">'/api/limites'</span>,</span><span class="l">        { limite_diario: limite });</span><span class="l">});</span></pre>
+      </div>
+    </div>
+    <p class="nota"><code>bddgen</code> genera un test por fila de Examples; al correr, cada frase busca su función y esta llama a la API.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <p class="seccion s1">1 · Herramienta</p>
+  <h1>Se instala con pip y npm, y corre con un comando</h1>
+  <div class="cuerpo">
+    <div class="col2" style="grid-template-columns:1.35fr 1fr">
+<pre><span class="l">pip install -r requirements-pruebas.txt</span><span class="l">npm install</span><span class="l"> </span><span class="l">npm test                <span class="c"># 108 escenarios</span></span><span class="l">npx playwright test --grep <span class="t">@HU-G5-02</span></span><span class="l">npx playwright test --grep <span class="t">@tecnico</span></span><span class="l">npx playwright test --grep <span class="t">@DEF</span></span><span class="l">npx playwright show-report</span></pre>
+      <ul>
+        <li><code>npm test</code> genera los tests, levanta la app y corre todo</li>
+        <li>Las etiquetas filtran por historia, tipo de caso o defecto</li>
+        <li>Deja <code>playwright-report/</code> en HTML y <code>junit-api.xml</code> para el CI</li>
+        <li>Solo API: no necesita instalar navegadores</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <p class="seccion s1">1 · Herramienta</p>
+  <h1>Ventajas, limitaciones y capacidades de IA</h1>
+  <div class="cuerpo">
+    <div class="col3">
+      <div class="tarjeta tinte-verde"><h2>Ventajas</h2><ul><li>Un runner para API y web</li><li>Levanta la app con <code>webServer</code></li><li>Reportes HTML, JUnit y trazas</li><li>TypeScript con autocompletado</li></ul></div>
+      <div class="tarjeta tinte-rojo"><h2>Limitaciones</h2><ul><li>Una BD y un reloj: corre en serie</li><li>Gherkin necesita el paso <code>bddgen</code></li><li>No valida el contrato OpenAPI</li><li>Requiere Node además de Python</li></ul></div>
+      <div class="tarjeta tinte-azul"><h2>IA (desde la 1.56)</h2><ul><li>Planner explora la app y escribe el plan</li><li>Generator escribe las pruebas</li><li>Healer repara las que fallan</li><li>Riesgo: el Healer puede «arreglar» la prueba que detecta un defecto</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <p class="seccion s2">2 · Módulo</p>
+  <h1>El límite acota lo que puede salir en un día</h1>
+  <div class="cuerpo">
+    <p>Si alguien obtiene el celular y el PIN, el límite acota la pérdida. Las alertas avisan al cliente cuando su gasto del día llega al umbral que fijó.</p>
+    <div class="col2" style="gap:28px">
+      <div class="tarjeta"><h2>Límite diario</h2><ul><li>R-G5-01 · De S/ 100 a S/ 2,000, en múltiplos de 50</li><li>R-G5-02 · Bajarlo rige al instante y cancela el aumento pendiente; subirlo rige a las 24 horas</li><li>RN-06 · Cuentan las transferencias Qolqe e interbancarias</li></ul></div>
+      <div class="tarjeta"><h2>Alertas de consumo</h2><ul><li>R-G5-03 · Hasta 5, umbral de S/ 10 a S/ 2,000 en múltiplos de 10</li><li>R-G5-04 · TRANSFERENCIAS y TODAS no superan el límite vigente</li><li>HU-G5-08 · Un SMS por día al alcanzar el umbral</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <p class="seccion s2">2 · Módulo</p>
+  <h1>Las 8 historias de G5, priorizadas por riesgo</h1>
+  <div class="cuerpo" style="gap:18px">
+    <table>
+      <thead><tr><th>HU</th><th>Historia</th><th>Prioridad</th><th>Nivel</th><th>Escenarios</th><th>Defectos</th></tr></thead>
+      <tbody>
+        <tr><td class="n">HU-G5-01</td><td>Ver mis límites</td><td>Media</td><td>API</td><td>1 + 1 técnico</td><td>—</td></tr>
+        <tr><td class="n">HU-G5-02</td><td>Cambiar mi límite diario</td><td><b>Alta</b></td><td>API</td><td>14 + 5 técnicos</td><td class="mal">DEF-01</td></tr>
+        <tr><td class="n">HU-G5-03</td><td>Respetar el límite al transferir</td><td><b>Alta</b></td><td>API · carga en la Parte 3</td><td>5</td><td class="mal">DEF-02</td></tr>
+        <tr><td class="n">HU-G5-04</td><td>Crear una alerta</td><td>Media</td><td>API</td><td>13</td><td>—</td></tr>
+        <tr><td class="n">HU-G5-05</td><td>Ver mis alertas</td><td>Baja</td><td>API · web en la Parte 2</td><td>1</td><td>—</td></tr>
+        <tr><td class="n">HU-G5-06</td><td>Editar, pausar o reanudar</td><td>Media</td><td>API · web en la Parte 2</td><td>1 + 1 técnico</td><td>—</td></tr>
+        <tr><td class="n">HU-G5-07</td><td>Eliminar una alerta</td><td>Baja</td><td>API · web en la Parte 2</td><td>1 + 1 técnico</td><td>—</td></tr>
+        <tr><td class="n">HU-G5-08</td><td>Recibir la notificación</td><td><b>Alta</b></td><td>API</td><td>5</td><td class="mal">DEF-03</td></tr>
+      </tbody>
+    </table>
+    <p class="nota">Alta: mueve dinero o avisa al cliente. Además cubrimos el núcleo común (HU-N-01 a HU-N-09): 59 escenarios y 6 defectos.</p>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <p class="seccion s3">3 · Diseño de casos</p>
+  <h1>Cada escenario se traza hasta su historia y su regla</h1>
+  <div class="cuerpo" style="gap:30px">
+    <div>
+      <p class="fila-titulo">Cómo nace un caso</p>
+      <div class="cadena">
+        <div class="eslabon"><small>Historia</small><b>HU-G5-02</b><span>Cambiar mi límite diario</span></div><div class="flecha">→</div>
+        <div class="eslabon"><small>Criterio</small><b>CA1</b><span>Se aplica R-G5-01</span></div><div class="flecha">→</div>
+        <div class="eslabon"><small>Regla</small><b>R-G5-01</b><span>S/ 100 a 2,000, múltiplos de 50</span></div><div class="flecha">→</div>
+        <div class="eslabon"><small>Valores límite</small><b>8 valores</b><span>50 · 99.99 · 100 · 120 · 150 · 1950 · 2000 · 2050</span></div><div class="flecha">→</div>
+        <div class="eslabon"><small>Escenario</small><b>@HU-G5-02</b><span>Scenario Outline: 8 filas, 8 tests</span></div>
+      </div>
+    </div>
+    <div>
+      <p class="fila-titulo">Cómo se asocia un defecto</p>
+      <div class="cadena">
+        <div class="eslabon"><small>Historia</small><b>HU-G5-02</b><span>Cambiar mi límite diario</span></div><div class="flecha">→</div>
+        <div class="eslabon"><small>Regla</small><b>R-G5-02</b><span>Bajar cancela el aumento pendiente</span></div><div class="flecha">→</div>
+        <div class="eslabon"><small>Escenario</small><b>@DEF-01 @fail</b><span>Una reducción cancela el aumento</span></div><div class="flecha">→</div>
+        <div class="eslabon"><small>Ejecución</small><b>Falla como se espera</b><span>La app conserva el aumento</span></div><div class="flecha">→</div>
+        <div class="eslabon"><small>Reporte</small><b>DEF-01</b><span>Pasos y evidencia en docs/defectos.md</span></div>
+      </div>
+    </div>
+    <p class="nota">La etiqueta une el <code>.feature</code>, el reporte y el informe: <code>--grep @HU-G5-02</code> corre solo esa historia.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <p class="seccion s3">3 · Diseño de casos</p>
+  <h1>Casos funcionales: particiones y valores límite</h1>
+  <div class="cuerpo" style="gap:18px">
+    <table>
+      <thead><tr><th>Regla</th><th>Inválido por debajo</th><th>Válido</th><th>Inválido por encima o fuera</th></tr></thead>
+      <tbody>
+        <tr><td>R-G5-01 · límite diario</td><td class="mal">50 · 99.99</td><td class="ok">100 · 150 · 1950 · 2000</td><td class="mal">2050 · 120 (no es múltiplo)</td></tr>
+        <tr><td>R-G5-03 · umbral de alerta</td><td class="mal">0 · 9.99</td><td class="ok">10 · 2000</td><td class="mal">2010 · 15 (no es múltiplo)</td></tr>
+        <tr><td>RN-05 · monto por operación</td><td>—</td><td class="ok">499.99 · 500.00</td><td class="mal">500.01</td></tr>
+        <tr><td>R-G5-02 · aumento a 1,500</td><td>1,439 min: rige 1,000</td><td class="ok">1,440 min: rige 1,500</td><td>—</td></tr>
+        <tr><td>HU-G5-08 · umbral de S/ 300</td><td>299.99: 0 SMS</td><td class="ok">300.00 · 300.01: 1 SMS</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p class="nota">Se prueba justo en el borde y uno más allá. El tiempo se controla con el reloj de la app (<code>PUT /api/pruebas/reloj</code>), sin esperar 24 horas.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <p class="seccion s3">3 · Diseño de casos</p>
+  <h1>Casos técnicos: la API debe validar siempre</h1>
+  <div class="cuerpo" style="gap:18px">
+    <table>
+      <thead><tr><th>Qué se verifica</th><th>Solicitud</th><th>Respuesta esperada y obtenida</th></tr></thead>
+      <tbody>
+        <tr><td>Autenticación</td><td><code>GET /api/limites</code> sin token</td><td>401 <code>NO_AUTENTICADO</code></td></tr>
+        <tr><td>Autenticación</td><td><code>PUT /api/limites</code> con un token inválido</td><td>401 <code>NO_AUTENTICADO</code></td></tr>
+        <tr><td>Campo obligatorio</td><td>Cuerpo vacío <code>{}</code></td><td>422 <code>SOLICITUD_INVALIDA</code> que indica <code>limite_diario</code></td></tr>
+        <tr><td>Tipo de dato</td><td><code>limite_diario</code>: <code>"abc"</code> · <code>null</code></td><td>422 <code>SOLICITUD_INVALIDA</code> y el límite no cambia</td></tr>
+        <tr><td>Sin efecto</td><td>Cambio rechazado a S/ 2050</td><td>422 y el límite sigue en S/ 1,000</td></tr>
+        <tr><td>Propiedad de los datos</td><td>Diego pausa o elimina la alerta de Ana</td><td>404 <code>ALERTA_NO_ENCONTRADA</code> y la alerta sigue activa</td></tr>
+      </tbody>
+    </table>
+    <p class="nota">8 escenarios con la etiqueta <code>@tecnico</code>. Todos pasan: en estos casos la API se comporta como dice el contrato.</p>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <p class="seccion s3">3 · Diseño de casos</p>
+  <h1>Schemathesis prueba el contrato OpenAPI</h1>
+  <div class="cuerpo">
+    <div class="col2" style="grid-template-columns:0.9fr 1.1fr">
+      <div>
+        <p>Lee <code>/openapi.json</code> y genera cientos de solicitudes. Comprueba que ninguna respuesta sea 500 y que cada respuesta esté documentada y cumpla su esquema.</p>
+        <p class="nota" style="margin-top:20px">Una corrida: 518 solicitudes sobre 13 operaciones. Deja un reporte HTML en <code>reportes/schemathesis/</code>.</p>
+      </div>
+      <table>
+        <thead><tr><th>Aviso</th><th>Lectura</th></tr></thead>
+        <tbody>
+          <tr><td>Rechazó una solicitud válida según el esquema</td><td>Reglas de negocio que el OpenAPI no declara: múltiplos de 50, saldo, duplicados</td></tr>
+          <tr><td>Aceptó una solicitud que viola el esquema</td><td><code>cci</code> de otro tipo se ignora; <code>pin</code> fuera de patrón en el login. Severidad baja</td></tr>
+          <tr><td>Cabecera <code>Allow</code> inválida</td><td>Las respuestas 405 a <code>OPTIONS</code> no la incluyen. Severidad baja</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="nota">Recomendación: declarar <code>multipleOf</code>, mínimos y máximos en el contrato.</p>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <p class="seccion s4">4 · Demo y resultados</p>
+  <h1>Demo en vivo</h1>
+  <div class="cuerpo">
+    <div class="pasos">
+      <div class="paso"><span class="num s1">1</span><div><h2>Los 108 escenarios</h2><pre>./scripts/demo.sh todo</pre><p class="tenue">Corre <code>npm test</code>, deja los datos limpios y abre el reporte HTML.</p></div></div>
+      <div class="paso"><span class="num s2">2</span><div><h2>DEF-06 en Swagger</h2><p class="tenue">Reiniciar datos → login de Ana → <code>POST /api/transferencias</code> a 934567812, la cuenta cerrada de Fabián → 201 en lugar de 422.</p></div></div>
+      <div class="paso"><span class="num s4">3</span><div><h2>El contrato</h2><pre>./scripts/demo.sh contrato</pre><p class="tenue">Corre Schemathesis contra <code>/openapi.json</code> y abre su reporte HTML.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide">
+  <p class="seccion s4">4 · Demo y resultados</p>
+  <h1>108 escenarios en unos 20 segundos</h1>
+  <div class="cuerpo">
+    <div class="cifras">
+      <div class="cifra tinte-verde"><b class="ok">97</b><span>pasan: la app cumple la regla</span></div>
+      <div class="cifra tinte-rojo"><b class="mal">10</b><span>fallan como se espera: detectan 9 defectos</span></div>
+      <div class="cifra"><b class="tenue">1</b><span>queda para la Parte 3: transferencias simultáneas</span></div>
+    </div>
+    <p class="nota">49 escenarios del módulo G5 (8 técnicos) y 59 del núcleo. En pantalla: <code>107 passed, 1 skipped</code>, porque <code>@fail</code> cuenta el fallo esperado como éxito.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide">
+  <p class="seccion s4">4 · Demo y resultados</p>
+  <h1>Lo encontrado: 9 defectos y su historia</h1>
+  <div class="cuerpo" style="gap:16px">
+    <table class="compacta">
+      <thead><tr><th>ID</th><th>Qué pasa</th><th>Historia</th><th>Regla o criterio</th><th>Severidad</th></tr></thead>
+      <tbody>
+        <tr><td class="n">DEF-02</td><td>Las interbancarias no cuentan para el límite diario</td><td class="n">HU-G5-03</td><td>RN-06</td><td class="mal">Crítica</td></tr>
+        <tr><td class="n">DEF-04</td><td>Una interbancaria deja el saldo en S/ −1.00</td><td class="n">HU-N-08</td><td>RN-08</td><td class="mal">Crítica</td></tr>
+        <tr><td class="n">DEF-06</td><td>Se puede transferir a una cuenta cerrada</td><td class="n">HU-N-07</td><td>RN-07</td><td class="mal">Crítica</td></tr>
+        <tr><td class="n">DEF-01</td><td>Bajar el límite no cancela el aumento pendiente</td><td class="n">HU-G5-02</td><td>R-G5-02</td><td>Alta</td></tr>
+        <tr><td class="n">DEF-07</td><td>Cerrar sesión no invalida el token</td><td class="n">HU-N-03</td><td>HU-N-03 CA1</td><td>Alta</td></tr>
+        <tr><td class="n">DEF-03</td><td>La alerta avisa más de una vez por día</td><td class="n">HU-G5-08</td><td>HU-G5-08 CA2</td><td>Media</td></tr>
+        <tr><td class="n">DEF-05</td><td>El registro acepta el PIN 4321</td><td class="n">HU-N-01</td><td>RN-03</td><td>Media</td></tr>
+        <tr><td class="n">DEF-08</td><td>Un ingreso exitoso no reinicia los intentos</td><td class="n">HU-N-02</td><td>RN-04</td><td>Media</td></tr>
+        <tr><td class="n">DEF-09</td><td>Registros simultáneos responden 500</td><td class="n">HU-N-01</td><td>HU-N-01 CA3</td><td>Media</td></tr>
+      </tbody>
+    </table>
+    <p class="nota">Cada uno tiene pasos, resultado esperado, obtenido y evidencia en <code>docs/defectos.md</code>, y un escenario <code>@DEF-xx @fail</code> que lo detecta.</p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide">
+  <p class="seccion s4">Cierre</p>
+  <h1>Tres defectos críticos tocan el dinero</h1>
+  <div class="cuerpo">
+    <p>Las interbancarias no cuentan para el límite diario, el saldo puede quedar negativo y se puede transferir a una cuenta cerrada. Con ellos abiertos, Qolqe no debería salir a producción.</p>
+    <div class="tarjeta tinte-amarillo"><p><b style="font-weight:600">Parte 2:</b> las mismas reglas desde la web, con Page Objects sobre los <code>data-testid</code>, en el pipeline de GitHub Actions.</p></div>
+  </div>
+</section>
+
+</div>
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  const total = slides.length;
+  slides.forEach((s, i) => {
+    const pie = document.createElement('div');
+    pie.className = 'pie';
+    pie.innerHTML = i === 0 ? '' : '<span>G5 · Límites</span><span>' + (i + 1) + ' / ' + total + '</span>';
+    s.appendChild(pie);
+  });
+  let actual = Math.min(Math.max(parseInt(location.hash.slice(1), 10) || 1, 1), total) - 1;
+  function mostrar(n) {
+    actual = Math.min(Math.max(n, 0), total - 1);
+    slides.forEach((s, i) => s.classList.toggle('activa', i === actual));
+    history.replaceState(null, '', '#' + (actual + 1));
+  }
+  function escalar() {
+    const k = Math.min(innerWidth / 1600, innerHeight / 900);
+    document.getElementById('deck').style.transform = 'translate(-50%, -50%) scale(' + k + ')';
+  }
+  addEventListener('keydown', (e) => {
+    if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); mostrar(actual + 1); }
+    if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); mostrar(actual - 1); }
+    if (e.key === 'Home') mostrar(0);
+    if (e.key === 'End') mostrar(total - 1);
+    if (e.key === 'f') document.documentElement.requestFullscreen?.();
+  });
+  addEventListener('click', (e) => mostrar(actual + (e.clientX > innerWidth / 3 ? 1 : -1)));
+  addEventListener('resize', escalar);
+  escalar();
+  mostrar(actual);
+</script>
+</body>
+</html>
