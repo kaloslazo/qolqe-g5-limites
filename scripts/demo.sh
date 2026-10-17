@@ -26,6 +26,16 @@ reiniciar() {
   curl -sf -X POST "$URL/api/pruebas/reiniciar" > /dev/null && echo "datos semilla restaurados, reloj en hora real"
 }
 
+# una sola corrida a la vez: la suite y schemathesis comparten la misma bd y el mismo reloj
+exclusivo() {
+  if ! mkdir reportes/.corriendo 2> /dev/null; then
+    echo "ya hay otra corrida en curso (todo, suite, contrato o def06); espera a que termine"
+    echo "si no hay ninguna, borra el candado con: ./scripts/demo.sh parar"
+    exit 1
+  fi
+  trap 'rmdir reportes/.corriendo 2> /dev/null || true' EXIT
+}
+
 # cierra el show-report anterior para que no choque el puerto 9323
 reporte() {
   for pid in $(lsof -ti "tcp:$PUERTO_REPORTE" -sTCP:LISTEN 2>/dev/null); do
@@ -39,14 +49,16 @@ reporte() {
 }
 
 suite() {
+  exclusivo
   app
   npx playwright test --grep "${1:-@HU-G5-02}" || true
   reiniciar
   reporte
 }
 
-# los 100 escenarios, como pide la profe en la demo
+# los 108 escenarios, como pide la profe en la demo
 todo() {
+  exclusivo
   app
   npm test || true
   reiniciar
@@ -55,6 +67,7 @@ todo() {
 
 # schemathesis contra /openapi.json; abre su reporte html
 contrato() {
+  exclusivo
   app
   PATH="$PWD/.venv/bin:$PATH" npm run contrato || true
   reiniciar
@@ -64,6 +77,7 @@ contrato() {
 }
 
 def06() {
+  exclusivo
   app
   reiniciar
   local token
@@ -83,6 +97,7 @@ parar() {
     [ -n "$pids" ] && kill $pids && echo "detenido lo que corría en :$p"
   done
   rm -f reportes/uvicorn.pid
+  rmdir reportes/.corriendo 2> /dev/null || true
 }
 
 case "${1:-suite}" in
