@@ -1,2 +1,5 @@
 -r requirements.txt
 schemathesis>=4.0
+# desde la 0.118 el commit de obtener_bd corre despues de enviar la respuesta:
+# una consulta inmediata puede no ver lo recien guardado y el ci falla al azar
+fastapi>=0.115,<0.118
