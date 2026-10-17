@@ -12,4 +12,4 @@ st run "$URL/openapi.json" \
   --checks all --max-examples 20 \
   --include-path-regex '^/api/(limites|cuentas|transferencias|auth/login|usuarios)' \
   --exclude-path '/api/cuentas/me/cierre' \
-  --report junit --report-dir reportes/schemathesis
+  --report junit,html --report-dir reportes/schemathesis

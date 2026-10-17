@@ -207,3 +207,58 @@ Feature: Límites y alertas de consumo
     And que eliminé la alerta de TRANSFERENCIAS con umbral S/ 300
     When transfiero S/ 300.00 al celular 912345678
     Then recibo 0 SMS de alerta de consumo
+
+  # ------------------------------------------------------------------ Casos técnicos (autenticación, cuerpo, sin efecto, propiedad de los datos)
+  @HU-G5-01 @api @tecnico
+  Scenario: Sin token no puedo consultar mis límites
+    When consulto mis límites sin token
+    Then la respuesta tiene el código HTTP 401
+    And el resultado es "NO_AUTENTICADO"
+
+  @HU-G5-02 @api @tecnico
+  Scenario: Con un token inválido no puedo cambiar mi límite
+    When cambio mi límite diario a S/ 500 con el token "token-invalido"
+    Then la respuesta tiene el código HTTP 401
+    And el resultado es "NO_AUTENTICADO"
+
+  @HU-G5-02 @api @tecnico
+  Scenario Outline: Un cuerpo vacío o con un tipo inválido se rechaza sin cambiar el límite
+    Given que inicié sesión como Diego
+    When envío el cambio de límite con el cuerpo '<cuerpo>'
+    Then la respuesta tiene el código HTTP 422
+    And el resultado es "SOLICITUD_INVALIDA"
+    And el error indica el campo "limite_diario"
+    And mi límite diario vigente es S/ 1000.00
+
+    Examples:
+      | cuerpo                   |
+      | {}                       |
+      | {"limite_diario": "abc"} |
+      | {"limite_diario": null}  |
+
+  @HU-G5-02 @api @tecnico
+  Scenario: Un cambio rechazado por regla de negocio no tiene efecto
+    Given que inicié sesión como Diego
+    When cambio mi límite diario a S/ 2050
+    Then la respuesta tiene el código HTTP 422
+    And el resultado es "LIMITE_INVALIDO"
+    And mi límite diario vigente es S/ 1000.00
+    And no tengo un aumento pendiente
+
+  @api @tecnico
+  Scenario Outline: La alerta de otro usuario responde como si no existiera
+    Given que inicié sesión como Diego
+    When intento <accion> la alerta de TRANSFERENCIAS con umbral S/ 300 de Ana
+    Then la respuesta tiene el código HTTP 404
+    And el resultado es "ALERTA_NO_ENCONTRADA"
+    And la alerta de TRANSFERENCIAS con umbral S/ 300 de Ana sigue ACTIVA
+
+    @HU-G5-06
+    Examples: Pausar
+      | accion |
+      | pausar |
+
+    @HU-G5-07
+    Examples: Eliminar
+      | accion   |
+      | eliminar |

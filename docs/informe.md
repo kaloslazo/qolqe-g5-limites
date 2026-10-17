@@ -28,6 +28,8 @@ Criterios: prioridad (riesgo), si la regla es observable en la API sin UI y si r
 
 **Cobertura de Gherkin:** 5 archivos `.feature` (`limites`, `nucleo_registro`, `nucleo_sesion`, `nucleo_cuenta`, `nucleo_transferencias`), con todas las HU del núcleo y del módulo. Cada escenario lleva la etiqueta de su HU y su nivel (`@HU-G5-02 @api`).
 
+**Casos funcionales y técnicos:** los funcionales verifican las reglas de negocio (R-G5-01 a R-G5-05, RN-01 a RN-09) con particiones y valores límite. Los técnicos (`@tecnico`) verifican la interfaz del módulo G5: autenticación (sin token o con un token inválido → 401 `NO_AUTENTICADO`), cuerpo vacío o con un tipo inválido (422 `SOLICITUD_INVALIDA` que indica el campo), ausencia de efecto tras un rechazo (el límite vigente no cambia) y propiedad de los datos (la alerta de otro usuario responde 404 `ALERTA_NO_ENCONTRADA` y no se modifica).
+
 ## 2. Pruebas de API
 
 **Herramienta:** Playwright Test (cliente `request` / `APIRequestContext`) + playwright-bdd. Los escenarios de `features/*.feature` se enlazan con pasos en TypeScript (`tests/api-playwright/pasos.ts`, `pasos_nucleo.ts`); `bddgen` los convierte en specs de Playwright.
@@ -50,7 +52,7 @@ npm run report                             # reporte HTML
 **Limitaciones:** los escenarios comparten BD y reloj, así que corren en serie (`workers: 1`); playwright-bdd agrega un paso de generación (`bddgen`); no valida contratos OpenAPI (para eso Schemathesis); requiere Node además de Python.
 **Capacidades de IA:** test agents Planner, Generator y Healer (`npx playwright init-agents`, desde v1.56); servidor MCP `@playwright/mcp`; depurador y análisis de trazas por CLI (v1.59). Riesgo: el Healer puede "arreglar" una aserción que en realidad detecta un defecto; el oráculo sigue siendo el requisito.
 
-**Resultados:** 101 escenarios: 90 pasan, 10 fallan como se espera porque detectan 9 defectos (DEF-06 tiene dos escenarios) y 1 queda para la Parte 3 (`@rendimiento @skip`).
+**Resultados:** 108 escenarios (8 técnicos): 97 pasan, 10 fallan como se espera porque detectan 9 defectos (DEF-06 tiene dos escenarios) y 1 queda para la Parte 3 (`@rendimiento @skip`).
 
 **Contrato (Schemathesis 4.31)** — `npm run contrato` (`scripts/contrato.sh`): reinicia la semilla, usa el usuario de carga 900000001 y excluye el cierre de cuenta para no romper el token.
 

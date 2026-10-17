@@ -3,8 +3,15 @@
  * Expresiones de Cucumber: {word} = un token sin espacios, {string} = texto entre comillas, {int} = entero.
  * La barra de "S/" se escapa ("S\\/") porque en Cucumber "/" significa alternativa.
  */
-import { expect } from '@playwright/test';
-import { CCI, Given, Then, When, cuerpo as leer } from './fixtures';
+import { expect, type APIRequestContext } from '@playwright/test';
+import { CCI, Given, Sesion, Then, When, cuerpo as leer } from './fixtures';
+
+/** Alerta de otro usuario, leída con la sesión de ese usuario. */
+async function alertaDe(request: APIRequestContext, nombre: string, tipo: string, umbral: string) {
+  const otra = new Sesion(request);
+  await otra.login(nombre);
+  return otra.alerta(tipo, umbral);
+}
 
 // ------------------------------------------------------------------------------------- Given
 Given('que los datos de prueba están restaurados', async ({ request }) => {
@@ -81,6 +88,30 @@ When('reanudo la alerta de {word} con umbral S\\/ {word}', async ({ sesion }, ti
   sesion.respuesta = await sesion.api('put', `/api/limites/alertas/${a.id}`, { estado: 'ACTIVA' });
 });
 
+// ------------------------------------------------------------------------------------- When (casos técnicos)
+When('consulto mis límites sin token', async ({ sesion }) => {
+  sesion.respuesta = await sesion.cruda('get', '/api/limites');
+});
+
+When('cambio mi límite diario a S\\/ {word} con el token {string}', async ({ sesion }, limite: string, token: string) => {
+  sesion.respuesta = await sesion.cruda('put', '/api/limites', token, { limite_diario: limite });
+});
+
+// el cuerpo se envía tal cual está escrito en el .feature
+When('envío el cambio de límite con el cuerpo {string}', async ({ sesion }, cuerpo: string) => {
+  sesion.respuesta = await sesion.api('put', '/api/limites', cuerpo);
+});
+
+When('intento pausar la alerta de {word} con umbral S\\/ {word} de {word}', async ({ sesion, request }, tipo: string, umbral: string, dueno: string) => {
+  const a = await alertaDe(request, dueno, tipo, umbral);
+  sesion.respuesta = await sesion.api('put', `/api/limites/alertas/${a.id}`, { estado: 'PAUSADA' });
+});
+
+When('intento eliminar la alerta de {word} con umbral S\\/ {word} de {word}', async ({ sesion, request }, tipo: string, umbral: string, dueno: string) => {
+  const a = await alertaDe(request, dueno, tipo, umbral);
+  sesion.respuesta = await sesion.api('delete', `/api/limites/alertas/${a.id}`);
+});
+
 // ------------------------------------------------------------------------------------- Then
 Then('el resultado es {string}', async ({ sesion }, resultado: string) => {
   const r = sesion.respuesta!;
@@ -137,6 +168,15 @@ Then('recibo {int} SMS de alerta de consumo', async ({ sesion }, n: number) => {
 
 Then('la alerta de {word} con umbral S\\/ {word} está {word}', async ({ sesion }, tipo: string, umbral: string, estado: string) => {
   expect((await sesion.alerta(tipo, umbral)).estado).toBe(estado);
+});
+
+Then('el error indica el campo {string}', async ({ sesion }, campo: string) => {
+  const errores: { campo: string }[] = (await leer(sesion.respuesta!)).errores ?? [];
+  expect(errores.map((e) => e.campo), JSON.stringify(errores)).toContain(`body.${campo}`);
+});
+
+Then('la alerta de {word} con umbral S\\/ {word} de {word} sigue {word}', async ({ request }, tipo: string, umbral: string, dueno: string, estado: string) => {
+  expect((await alertaDe(request, dueno, tipo, umbral)).estado).toBe(estado);
 });
 
 Then('mi saldo es S\\/ {word}', async ({ sesion }, saldo: string) => {
