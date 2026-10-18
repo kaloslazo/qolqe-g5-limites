@@ -83,7 +83,6 @@ El script no deja correr dos de estos comandos a la vez.
 | Informe (secciones 1, 2 y 5) | `docs/informe.md` |
 | Defectos (DEF-01 a DEF-09) | `docs/defectos.md` |
 | Diapositivas | `docs/expo/index.html` y `docs/expo/G5-Limites-Parte1.pdf` |
-| Declaración de IA | `IA.md` |
 | Pipeline | `.github/workflows/pruebas.yml` (sube los reportes como artefacto) |
 
 ## Resultados
