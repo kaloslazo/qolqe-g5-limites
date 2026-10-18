@@ -3,6 +3,7 @@
 # Usa un usuario de carga para no tocar a los usuarios de los escenarios y excluye el cierre de cuenta.
 set -euo pipefail
 URL="${QOLQE_URL:-http://localhost:8000}"
+curl -sf -X DELETE "$URL/api/pruebas/reloj" > /dev/null
 curl -sf -X POST "$URL/api/pruebas/reiniciar" > /dev/null
 TOKEN=$(curl -sf -X POST "$URL/api/auth/login" -H 'Content-Type: application/json' \
   -d '{"celular":"900000001","pin":"2580"}' | python -c 'import sys,json;print(json.load(sys.stdin)["access_token"])')

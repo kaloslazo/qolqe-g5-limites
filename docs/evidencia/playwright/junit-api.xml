@@ -1,0 +1,324 @@
+<testsuites id="" name="" tests="108" failures="0" skipped="1" errors="0" time="21.921687">
+<testsuite name="features/limites.feature.spec.js" timestamp="2026-10-18T00:09:11.847Z" hostname="" tests="49" failures="0" skipped="0" time="10.179" errors="0">
+<testcase name="Límites y alertas de consumo › Veo mis límites con lo usado y lo disponible del día" classname="features/limites.feature.spec.js" time="0.467">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del nuevo límite diario (valores límite de R-G5-01) › Example #1" classname="features/limites.feature.spec.js" time="0.178">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del nuevo límite diario (valores límite de R-G5-01) › Example #2" classname="features/limites.feature.spec.js" time="0.192">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del nuevo límite diario (valores límite de R-G5-01) › Example #3" classname="features/limites.feature.spec.js" time="0.221">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del nuevo límite diario (valores límite de R-G5-01) › Example #4" classname="features/limites.feature.spec.js" time="0.153">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del nuevo límite diario (valores límite de R-G5-01) › Example #5" classname="features/limites.feature.spec.js" time="0.159">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del nuevo límite diario (valores límite de R-G5-01) › Example #6" classname="features/limites.feature.spec.js" time="0.167">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del nuevo límite diario (valores límite de R-G5-01) › Example #7" classname="features/limites.feature.spec.js" time="0.168">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del nuevo límite diario (valores límite de R-G5-01) › Example #8" classname="features/limites.feature.spec.js" time="0.141">
+</testcase>
+<testcase name="Límites y alertas de consumo › Una reducción del límite es inmediata" classname="features/limites.feature.spec.js" time="0.179">
+</testcase>
+<testcase name="Límites y alertas de consumo › Un aumento del límite queda programado para 24 horas después" classname="features/limites.feature.spec.js" time="0.192">
+</testcase>
+<testcase name="Límites y alertas de consumo › El aumento entra en vigencia exactamente a las 24 horas › Example #1" classname="features/limites.feature.spec.js" time="0.223">
+</testcase>
+<testcase name="Límites y alertas de consumo › El aumento entra en vigencia exactamente a las 24 horas › Example #2" classname="features/limites.feature.spec.js" time="0.192">
+</testcase>
+<testcase name="Límites y alertas de consumo › Una reducción cancela el aumento pendiente" classname="features/limites.feature.spec.js" time="0.226">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-limites.feature-L-b7786-ancela-el-aumento-pendiente/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Límites y alertas de consumo › Reducir el límite por debajo del umbral pausa la alerta de transferencias" classname="features/limites.feature.spec.js" time="0.144">
+</testcase>
+<testcase name="Límites y alertas de consumo › Transferir respetando el límite diario vigente › Example #1" classname="features/limites.feature.spec.js" time="0.306">
+</testcase>
+<testcase name="Límites y alertas de consumo › Transferir respetando el límite diario vigente › Example #2" classname="features/limites.feature.spec.js" time="0.34">
+</testcase>
+<testcase name="Límites y alertas de consumo › Transferir respetando el límite diario vigente › Example #3" classname="features/limites.feature.spec.js" time="0.236">
+</testcase>
+<testcase name="Límites y alertas de consumo › La transferencia que supera el límite diario por un céntimo se rechaza" classname="features/limites.feature.spec.js" time="0.358">
+</testcase>
+<testcase name="Límites y alertas de consumo › Las transferencias interbancarias también cuentan para el límite diario" classname="features/limites.feature.spec.js" time="0.388">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-limites.feature-L-1e813-entan-para-el-límite-diario/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del umbral de una alerta (valores límite de R-G5-03) › Example #1" classname="features/limites.feature.spec.js" time="0.164">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del umbral de una alerta (valores límite de R-G5-03) › Example #2" classname="features/limites.feature.spec.js" time="0.147">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del umbral de una alerta (valores límite de R-G5-03) › Example #3" classname="features/limites.feature.spec.js" time="0.165">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del umbral de una alerta (valores límite de R-G5-03) › Example #4" classname="features/limites.feature.spec.js" time="0.18">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del umbral de una alerta (valores límite de R-G5-03) › Example #5" classname="features/limites.feature.spec.js" time="0.172">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del umbral de una alerta (valores límite de R-G5-03) › Example #6" classname="features/limites.feature.spec.js" time="0.197">
+</testcase>
+<testcase name="Límites y alertas de consumo › Validación del umbral de una alerta (valores límite de R-G5-03) › Example #7" classname="features/limites.feature.spec.js" time="0.165">
+</testcase>
+<testcase name="Límites y alertas de consumo › El umbral de TRANSFERENCIAS o TODAS no supera el límite diario vigente › Example #1" classname="features/limites.feature.spec.js" time="0.155">
+</testcase>
+<testcase name="Límites y alertas de consumo › El umbral de TRANSFERENCIAS o TODAS no supera el límite diario vigente › Example #2" classname="features/limites.feature.spec.js" time="0.163">
+</testcase>
+<testcase name="Límites y alertas de consumo › El umbral de TRANSFERENCIAS o TODAS no supera el límite diario vigente › Example #3" classname="features/limites.feature.spec.js" time="0.149">
+</testcase>
+<testcase name="Límites y alertas de consumo › El umbral de TRANSFERENCIAS o TODAS no supera el límite diario vigente › Example #4" classname="features/limites.feature.spec.js" time="0.154">
+</testcase>
+<testcase name="Límites y alertas de consumo › No se permiten dos alertas con el mismo tipo y umbral" classname="features/limites.feature.spec.js" time="0.154">
+</testcase>
+<testcase name="Límites y alertas de consumo › No se puede crear una sexta alerta" classname="features/limites.feature.spec.js" time="0.178">
+</testcase>
+<testcase name="Límites y alertas de consumo › No se puede reanudar una alerta cuyo umbral supera el límite vigente" classname="features/limites.feature.spec.js" time="0.155">
+</testcase>
+<testcase name="Límites y alertas de consumo › La alerta notifica al alcanzar o superar el umbral › Example #1" classname="features/limites.feature.spec.js" time="0.187">
+</testcase>
+<testcase name="Límites y alertas de consumo › La alerta notifica al alcanzar o superar el umbral › Example #2" classname="features/limites.feature.spec.js" time="0.251">
+</testcase>
+<testcase name="Límites y alertas de consumo › La alerta notifica al alcanzar o superar el umbral › Example #3" classname="features/limites.feature.spec.js" time="0.28">
+</testcase>
+<testcase name="Límites y alertas de consumo › Cada alerta notifica como máximo una vez por día" classname="features/limites.feature.spec.js" time="0.37">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-limites.feature-L-425c7-como-máximo-una-vez-por-día/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Límites y alertas de consumo › Una alerta pausada no notifica" classname="features/limites.feature.spec.js" time="0.27">
+</testcase>
+<testcase name="Límites y alertas de consumo › Veo mis alertas con su gasto de hoy" classname="features/limites.feature.spec.js" time="0.239">
+</testcase>
+<testcase name="Límites y alertas de consumo › Una alerta eliminada deja de notificar" classname="features/limites.feature.spec.js" time="0.241">
+</testcase>
+<testcase name="Límites y alertas de consumo › Sin token no puedo consultar mis límites" classname="features/limites.feature.spec.js" time="0.114">
+</testcase>
+<testcase name="Límites y alertas de consumo › Con un token inválido no puedo cambiar mi límite" classname="features/limites.feature.spec.js" time="0.128">
+</testcase>
+<testcase name="Límites y alertas de consumo › Un cuerpo vacío o con un tipo inválido se rechaza sin cambiar el límite › Example #1" classname="features/limites.feature.spec.js" time="0.173">
+</testcase>
+<testcase name="Límites y alertas de consumo › Un cuerpo vacío o con un tipo inválido se rechaza sin cambiar el límite › Example #2" classname="features/limites.feature.spec.js" time="0.176">
+</testcase>
+<testcase name="Límites y alertas de consumo › Un cuerpo vacío o con un tipo inválido se rechaza sin cambiar el límite › Example #3" classname="features/limites.feature.spec.js" time="0.184">
+</testcase>
+<testcase name="Límites y alertas de consumo › Un cambio rechazado por regla de negocio no tiene efecto" classname="features/limites.feature.spec.js" time="0.167">
+</testcase>
+<testcase name="Límites y alertas de consumo › La alerta de otro usuario responde como si no existiera › Example #1" classname="features/limites.feature.spec.js" time="0.235">
+</testcase>
+<testcase name="Límites y alertas de consumo › La alerta de otro usuario responde como si no existiera › Example #2" classname="features/limites.feature.spec.js" time="0.236">
+</testcase>
+</testsuite>
+<testsuite name="features/nucleo_cuenta.feature.spec.js" timestamp="2026-10-18T00:09:11.847Z" hostname="" tests="11" failures="0" skipped="0" time="1.98" errors="0">
+<testcase name="Mi cuenta: saldo, perfil y cierre › Consulto mi saldo en soles" classname="features/nucleo_cuenta.feature.spec.js" time="0.182">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › Mi perfil muestra el DNI enmascarado" classname="features/nucleo_cuenta.feature.spec.js" time="0.174">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › Sin token no puedo consultar mi saldo" classname="features/nucleo_cuenta.feature.spec.js" time="0.106">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › Cambiar el correo envía un SMS de aviso" classname="features/nucleo_cuenta.feature.spec.js" time="0.147">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › El correo de otra cuenta activa no se puede usar" classname="features/nucleo_cuenta.feature.spec.js" time="0.138">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › El DNI y el celular no se pueden modificar" classname="features/nucleo_cuenta.feature.spec.js" time="0.15">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › Reglas para cerrar mi cuenta › Example #1" classname="features/nucleo_cuenta.feature.spec.js" time="0.182">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › Reglas para cerrar mi cuenta › Example #2" classname="features/nucleo_cuenta.feature.spec.js" time="0.181">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › Reglas para cerrar mi cuenta › Example #3" classname="features/nucleo_cuenta.feature.spec.js" time="0.184">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › Reglas para cerrar mi cuenta › Example #4" classname="features/nucleo_cuenta.feature.spec.js" time="0.184">
+</testcase>
+<testcase name="Mi cuenta: saldo, perfil y cierre › Tras cerrar la cuenta nadie puede transferirme" classname="features/nucleo_cuenta.feature.spec.js" time="0.352">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-nucleo_cuenta.fea-ab92f-ta-nadie-puede-transferirme/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="features/nucleo_registro.feature.spec.js" timestamp="2026-10-18T00:09:11.847Z" hostname="" tests="18" failures="0" skipped="0" time="2.627" errors="0">
+<testcase name="Registrarme › Registro exitoso con saldo cero, límite por defecto y SMS de bienvenida" classname="features/nucleo_registro.feature.spec.js" time="0.204">
+</testcase>
+<testcase name="Registrarme › Validación del DNI (RN-01) › Example #1" classname="features/nucleo_registro.feature.spec.js" time="0.112">
+</testcase>
+<testcase name="Registrarme › Validación del DNI (RN-01) › Example #2" classname="features/nucleo_registro.feature.spec.js" time="0.145">
+</testcase>
+<testcase name="Registrarme › Validación del DNI (RN-01) › Example #3" classname="features/nucleo_registro.feature.spec.js" time="0.13">
+</testcase>
+<testcase name="Registrarme › Validación del DNI (RN-01) › Example #4" classname="features/nucleo_registro.feature.spec.js" time="0.129">
+</testcase>
+<testcase name="Registrarme › Validación del celular (RN-02) › Example #1" classname="features/nucleo_registro.feature.spec.js" time="0.131">
+</testcase>
+<testcase name="Registrarme › Validación del celular (RN-02) › Example #2" classname="features/nucleo_registro.feature.spec.js" time="0.127">
+</testcase>
+<testcase name="Registrarme › Validación del celular (RN-02) › Example #3" classname="features/nucleo_registro.feature.spec.js" time="0.128">
+</testcase>
+<testcase name="Registrarme › Validación del celular (RN-02) › Example #4" classname="features/nucleo_registro.feature.spec.js" time="0.129">
+</testcase>
+<testcase name="Registrarme › Validación del celular (RN-02) › Example #5" classname="features/nucleo_registro.feature.spec.js" time="0.136">
+</testcase>
+<testcase name="Registrarme › Validación del PIN (RN-03) › Example #1" classname="features/nucleo_registro.feature.spec.js" time="0.167">
+</testcase>
+<testcase name="Registrarme › Validación del PIN (RN-03) › Example #2" classname="features/nucleo_registro.feature.spec.js" time="0.15">
+</testcase>
+<testcase name="Registrarme › Validación del PIN (RN-03) › Example #3" classname="features/nucleo_registro.feature.spec.js" time="0.152">
+</testcase>
+<testcase name="Registrarme › Validación del PIN (RN-03) › Example #4" classname="features/nucleo_registro.feature.spec.js" time="0.144">
+</testcase>
+<testcase name="Registrarme › Validación del PIN (RN-03) › Example #5" classname="features/nucleo_registro.feature.spec.js" time="0.184">
+</testcase>
+<testcase name="Registrarme › Un PIN en secuencia descendente se rechaza (RN-03)" classname="features/nucleo_registro.feature.spec.js" time="0.175">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-nucleo_registro.f-fd345-scendente-se-rechaza-RN-03-/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Registrarme › Correo ya usado por otra cuenta activa, sin distinguir mayúsculas" classname="features/nucleo_registro.feature.spec.js" time="0.133">
+</testcase>
+<testcase name="Registrarme › Dos registros simultáneos con el mismo celular responden 201 y 409, nunca 500" classname="features/nucleo_registro.feature.spec.js" time="0.151">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-nucleo_registro.f-de998-sponden-201-y-409-nunca-500/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="features/nucleo_sesion.feature.spec.js" timestamp="2026-10-18T00:09:11.847Z" hostname="" tests="10" failures="0" skipped="0" time="1.853" errors="0">
+<testcase name="Iniciar y cerrar sesión › Ingreso con credenciales correctas" classname="features/nucleo_sesion.feature.spec.js" time="0.142">
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Credenciales incorrectas con mensaje genérico › Example #1" classname="features/nucleo_sesion.feature.spec.js" time="0.143">
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Credenciales incorrectas con mensaje genérico › Example #2" classname="features/nucleo_sesion.feature.spec.js" time="0.12">
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Bloqueo al tercer intento fallido consecutivo" classname="features/nucleo_sesion.feature.spec.js" time="0.218">
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Durante el bloqueo ni el PIN correcto permite ingresar › Example #1" classname="features/nucleo_sesion.feature.spec.js" time="0.223">
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Durante el bloqueo ni el PIN correcto permite ingresar › Example #2" classname="features/nucleo_sesion.feature.spec.js" time="0.25">
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Un ingreso exitoso reinicia el conteo de intentos" classname="features/nucleo_sesion.feature.spec.js" time="0.265">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-nucleo_sesion.fea-d8f91-nicia-el-conteo-de-intentos/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Una cuenta cerrada no puede iniciar sesión" classname="features/nucleo_sesion.feature.spec.js" time="0.145">
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Al cerrar sesión el token deja de ser válido" classname="features/nucleo_sesion.feature.spec.js" time="0.153">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-nucleo_sesion.fea-f21f3-el-token-deja-de-ser-válido/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Iniciar y cerrar sesión › Cerrar una sesión no afecta las otras sesiones activas" classname="features/nucleo_sesion.feature.spec.js" time="0.194">
+</testcase>
+</testsuite>
+<testsuite name="features/nucleo_transferencias.feature.spec.js" timestamp="2026-10-18T00:09:11.847Z" hostname="" tests="20" failures="0" skipped="1" time="3.601" errors="0">
+<testcase name="Transferir dinero › Transferencia exitosa a un usuario registrado" classname="features/nucleo_transferencias.feature.spec.js" time="0.211">
+</testcase>
+<testcase name="Transferir dinero › Validación del monto por operación (RN-05) › Example #1" classname="features/nucleo_transferencias.feature.spec.js" time="0.164">
+</testcase>
+<testcase name="Transferir dinero › Validación del monto por operación (RN-05) › Example #2" classname="features/nucleo_transferencias.feature.spec.js" time="0.264">
+</testcase>
+<testcase name="Transferir dinero › Validación del monto por operación (RN-05) › Example #3" classname="features/nucleo_transferencias.feature.spec.js" time="0.224">
+</testcase>
+<testcase name="Transferir dinero › Validación del monto por operación (RN-05) › Example #4" classname="features/nucleo_transferencias.feature.spec.js" time="0.15">
+</testcase>
+<testcase name="Transferir dinero › Validación del monto por operación (RN-05) › Example #5" classname="features/nucleo_transferencias.feature.spec.js" time="0.15">
+</testcase>
+<testcase name="Transferir dinero › Destinos no permitidos (RN-07) › Example #1" classname="features/nucleo_transferencias.feature.spec.js" time="0.159">
+</testcase>
+<testcase name="Transferir dinero › Destinos no permitidos (RN-07) › Example #2" classname="features/nucleo_transferencias.feature.spec.js" time="0.152">
+</testcase>
+<testcase name="Transferir dinero › Destinos no permitidos (RN-07) › Example #3" classname="features/nucleo_transferencias.feature.spec.js" time="0.209">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-nucleo_transferen-643ce--permitidos-RN-07-Example-3/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transferir dinero › El saldo debe cubrir el monto (RN-08)" classname="features/nucleo_transferencias.feature.spec.js" time="0.149">
+</testcase>
+<testcase name="Transferir dinero › Transferencias simultáneas no superan el límite ni dejan saldo negativo" classname="features/nucleo_transferencias.feature.spec.js">
+<properties>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Transferir dinero › Validación del CCI › Example #1" classname="features/nucleo_transferencias.feature.spec.js" time="0.149">
+</testcase>
+<testcase name="Transferir dinero › Validación del CCI › Example #2" classname="features/nucleo_transferencias.feature.spec.js" time="0.216">
+</testcase>
+<testcase name="Transferir dinero › Validación del CCI › Example #3" classname="features/nucleo_transferencias.feature.spec.js" time="0.167">
+</testcase>
+<testcase name="Transferir dinero › El saldo debe cubrir el monto más la comisión interbancaria" classname="features/nucleo_transferencias.feature.spec.js" time="0.238">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/features-nucleo_transferen-a49c0-s-la-comisión-interbancaria/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transferir dinero › Simular la comisión sin realizar la operación (RN-09) › Example #1" classname="features/nucleo_transferencias.feature.spec.js" time="0.167">
+</testcase>
+<testcase name="Transferir dinero › Simular la comisión sin realizar la operación (RN-09) › Example #2" classname="features/nucleo_transferencias.feature.spec.js" time="0.207">
+</testcase>
+<testcase name="Transferir dinero › Simular la comisión sin realizar la operación (RN-09) › Example #3" classname="features/nucleo_transferencias.feature.spec.js" time="0.282">
+</testcase>
+<testcase name="Transferir dinero › Simular la comisión sin realizar la operación (RN-09) › Example #4" classname="features/nucleo_transferencias.feature.spec.js" time="0.173">
+</testcase>
+<testcase name="Transferir dinero › Simular la comisión sin realizar la operación (RN-09) › Example #5" classname="features/nucleo_transferencias.feature.spec.js" time="0.17">
+</testcase>
+</testsuite>
+</testsuites>

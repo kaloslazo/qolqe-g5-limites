@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites errors="0" failures="9" skipped="0" tests="14" time="4.486590">
+  <testsuite name="schemathesis" hostname="MacBook-Pro-de-Kalos.local" errors="0" failures="9" skipped="0" tests="14" time="4.486590">
+    <testcase name="POST /api/auth/login" time="0.411349">
+      <failure type="failure">1. Test Case ID: WG6WJ6
+
+- API accepted schema-violating request
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 405, 406, 409, 415, 422, 428, 429, 5xx
+    Invalid component: in body - pin: Value not matching the '^\d{4}$' pattern
+
+[423] Locked:
+
+    `{"codigo":"CUENTA_BLOQUEADA","detail":"Superaste los intentos permitidos. Tu cuenta está bloqueada hasta las 19:25."}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"celular": "987654321", "pin": "\u00d7\udbd9\udd5c\u009b\u00b7"}' http://localhost:8000/api/auth/login</failure>
+      <failure type="failure">1. Test Case ID: frlFGP
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[423] Locked:
+
+    `{"codigo":"CUENTA_BLOQUEADA","detail":"Tu cuenta está bloqueada hasta las 19:25. Puedes solicitar un código de desbloqueo."}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"celular": "987654321", "pin": "3091", "dispositivo_id": "a1b2c3d4e5f60718"}' http://localhost:8000/api/auth/login</failure>
+    </testcase>
+    <testcase name="POST /api/limites/alertas" time="0.421193">
+      <failure type="failure">1. Test Case ID: Y5gRBo
+
+- Invalid Allow header
+
+    `Allow: GET` does not match the schema. Missing documented methods: POST
+
+    List exactly the methods this resource supports in `Allow`
+
+[405] Method Not Allowed:
+
+    `{"codigo":"ERROR_HTTP","detail":"Method Not Allowed"}`
+
+Reproduce with:
+
+    curl -X OPTIONS -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"tipo": "TRANSFERENCIAS", "umbral": "300"}' http://localhost:8000/api/limites/alertas</failure>
+      <failure type="failure">1. Test Case ID: EGpIW9
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+    Hint: The request body contains 2 additional properties not defined in the schema (`BÔ򋭁Öµ𚢹󒴿óó÷
+    #𠢁Ó𚊀`, `WÖW\x1aÅ Ó쁴_º򏃷`). The server appears to reject properties the schema allows. Declare `additionalProperties: false` if extras are not accepted, or make the server ignore unknown fields.
+
+[422] Unprocessable Content:
+
+    `{"codigo":"ALERTA_INVALIDA","detail":"El umbral debe estar entre S/ 10 y S/ 2,000"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"W\u00d6W\u001a\u00c5\u00a0\u00d3\u0095\uc074_\u00ba\ud9fc\udcf7": "", "B\u00d4\ud9ee\udf41\u00d6\u00b5\ud82a\udcb9\udb0b\udd3f\u00f3\u00f3\u00f7\n\ue224\uf7d4#\ud842\udc81\u00d3\ud828\ude80": {"\udb37\udc76\u00d0d": {"\udb47\udf05\u00b0\u00c4": -318, "V": -967}, "\ud8c0\udfb3\udb6a\uddd1\u00f2\ud932\udf9b\u00a69\udba5\udf31_\u00f3eG\uda16\udfa2\u00f6\u00f3v\u00f0": {}, "Z\u0096\u0001\u00a8\ud804\ude50": [538340912, null]}, "tipo": "PAGOS", "umbral": 3.402823466e+38}' http://localhost:8000/api/limites/alertas</failure>
+    </testcase>
+    <testcase name="POST /api/transferencias" time="0.416017">
+      <failure type="failure">1. Test Case ID: LAGNSK
+
+- API accepted schema-violating request
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 405, 406, 409, 415, 422, 428, 429, 5xx
+    Invalid component: in body - cci: Incorrect type
+
+[201] Created:
+
+    `{"codigo_operacion":"TRF26101719102900007","tipo":"QOLQE","monto":"100.00","comision":"0.00","total":"100.00","destinatario":{"nombre":"Bruno D.","celular":"912345678","cci":null},"saldo":"9647.75","fecha":"2026-10-17T19:10:29"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"tipo": "QOLQE", "celular_destino": "912345678", "monto": "100.00", "descripcion": "Almuerzo", "cci": "AAA"}' http://localhost:8000/api/transferencias</failure>
+      <failure type="failure">1. Test Case ID: M8dar5
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[422] Unprocessable Content:
+
+    `{"codigo":"MONTO_INVALIDO","detail":"El monto debe ser mayor a cero"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"monto": 0.0}' http://localhost:8000/api/transferencias</failure>
+    </testcase>
+    <testcase name="POST /api/usuarios" time="0.245204">
+      <failure type="failure">1. Test Case ID: FBstAZ
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[422] Unprocessable Content:
+
+    `{"codigo":"PIN_INVALIDO","detail":"El PIN no puede tener todos los dígitos iguales"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"celular": "987654321", "dni": "00000000", "nombres": "Ana Torres Quispe", "pin": "0000"}' http://localhost:8000/api/usuarios</failure>
+    </testcase>
+    <testcase name="PUT /api/cuentas/me" time="0.267873">
+      <failure type="failure">1. Test Case ID: Tz5xrz
+
+- Invalid Allow header
+
+    `Allow: GET` does not match the schema. Missing documented methods: PUT
+
+    List exactly the methods this resource supports in `Allow`
+
+[405] Method Not Allowed:
+
+    `{"codigo":"ERROR_HTTP","detail":"Method Not Allowed"}`
+
+Reproduce with:
+
+    curl -X OPTIONS -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"nombres": "Ana Luc\u00eda Torres Quispe", "correo": "ana.lucia@correo.pe"}' http://localhost:8000/api/cuentas/me</failure>
+    </testcase>
+    <testcase name="PUT /api/limites" time="0.052052">
+      <failure type="failure">1. Test Case ID: gEuVzF
+
+- Invalid Allow header
+
+    `Allow: GET` does not match the schema. Missing documented methods: PUT
+
+    List exactly the methods this resource supports in `Allow`
+
+[405] Method Not Allowed:
+
+    `{"codigo":"ERROR_HTTP","detail":"Method Not Allowed"}`
+
+Reproduce with:
+
+    curl -X OPTIONS -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"limite_diario": "1500"}' http://localhost:8000/api/limites</failure>
+      <failure type="failure">1. Test Case ID: q46qmo
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+    Hint: The request body contains 1 additional property not defined in the schema (`H񞸩`). The server appears to reject properties the schema allows. Declare `additionalProperties: false` if extras are not accepted, or make the server ignore unknown fields.
+
+[422] Unprocessable Content:
+
+    `{"codigo":"SOLICITUD_INVALIDA","detail":"La solicitud tiene datos inválidos","errores":[{"campo":"body.limite_diario","mensaje":"Input should be a valid decimal"}]}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"H\ud93b\ude29": [], "limite_diario": "\ud8fc\udd48\u00c1\u00a3"}' http://localhost:8000/api/limites</failure>
+    </testcase>
+    <testcase name="GET /api/cuentas/me" time="0.026395" />
+    <testcase name="GET /api/cuentas/me/saldo" time="0.036507" />
+    <testcase name="GET /api/limites" time="0.026823" />
+    <testcase name="GET /api/limites/alertas" time="0.030023" />
+    <testcase name="GET /api/transferencias/comision" time="0.110464">
+      <failure type="failure">1. Test Case ID: 83LGMx
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[422] Unprocessable Content:
+
+    `{"codigo":"MONTO_INVALIDO","detail":"El monto debe ser mayor a cero"}`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' 'http://localhost:8000/api/transferencias/comision?monto=0'</failure>
+    </testcase>
+    <testcase name="PUT /api/limites/alertas/{alerta_id}" time="0.096992">
+      <failure type="failure">1. Test Case ID: b7Wsuq
+
+- Invalid Allow header
+
+    `Allow: PUT` does not match the schema. Missing documented methods: DELETE
+
+    List exactly the methods this resource supports in `Allow`
+
+[405] Method Not Allowed:
+
+    `{"codigo":"ERROR_HTTP","detail":"Method Not Allowed"}`
+
+Reproduce with:
+
+    curl -X OPTIONS -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"umbral": "400"}' http://localhost:8000/api/limites/alertas/1</failure>
+      <failure type="failure">1. Test Case ID: YunJiM
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+    Hint: The request body contains 5 additional properties not defined in the schema (`y𯷻`, `򈫈`, `ÍÛæ򦸧񢂳` and 2 more). The server appears to reject properties the schema allows. Declare `additionalProperties: false` if extras are not accepted, or make the server ignore unknown fields.
+
+[422] Unprocessable Content:
+
+    `{"codigo":"SOLICITUD_INVALIDA","detail":"La solicitud tiene datos inválidos","errores":[{"campo":"body.umbral","mensaje":"Input should be a valid decimal"}]}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"\u00a8\f-\u0096\u00b0\u00ed": {"\u0087": {"\u00f9": {"\u0099\ud940\udea8p\ud95f\udc63\u00a2\u00e1F\u00f1\u00e3\u00056": false, "\ud825\ude0d": -425128, "\u00cf\u00cdv": "\u5b565\u0015f\udafb\udf30h\ud87a\udfa2\u00801\uda59\ude35d\u00d1\u00d8"}, "\u009c": {}, "\u00e2\u0006\u00da\u009b6$/\u00b1-[": "\ud8e9\udf78j`\ud97f\udc9a\u00be\u009c\udb5b\udfc0"}}, "y\ud87f\uddfb": [null, {"U\u009e\u00b5k\u00db\u00c7\"\u00d5\u008f\u00d6\udb0d\udc39\ud829\udcc9\u00c6\u00a2\ud8f8\udc40": -3.6243136024795724e-143}], "\u0091\u00cd\u00db\u00e6\uda5b\ude27\ud948\udcb3": [], "\u00f3\u00b6": [null], "\u0090\ud9e2\udec8\u009e": [{"\u0019": "\ud8ae\uddc6A%\ud84c\udda7\u0004c"}], "umbral": "\ud890\udc01zD"}' http://localhost:8000/api/limites/alertas/8330091955</failure>
+    </testcase>
+    <testcase name="DELETE /api/limites/alertas/{alerta_id}" time="0.069694" />
+    <testcase name="Stateful tests" time="2.276005">
+      <failure type="failure">1. Test Case ID: R7OaZu
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[422] Unprocessable Content:
+
+    `{"codigo":"SOLICITUD_INVALIDA","detail":"Un identificador o número está fuera del rango permitido","errores":[]}`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8000/api/limites/alertas
+    curl -X DELETE -H 'Authorization: [Filtered]' http://localhost:8000/api/limites/alertas/3409543540259864202696810561536</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

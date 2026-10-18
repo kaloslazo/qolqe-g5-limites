@@ -1,0 +1,684 @@
+INFO:     127.0.0.1:56016 - "GET /api/salud HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56016 - "GET /api/salud HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56018 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56018 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56018 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56018 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56018 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56018 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56018 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56018 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56018 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56020 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56020 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56020 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56020 - "PUT /api/limites HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56022 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56022 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56022 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56022 - "PUT /api/limites HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56024 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56024 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56024 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56024 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56026 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56026 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56026 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56026 - "PUT /api/limites HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56028 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56028 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56028 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56028 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56030 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56030 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56030 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56030 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56032 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56032 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56032 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56032 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56034 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56034 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56034 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56034 - "PUT /api/limites HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56037 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56037 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56037 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56037 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56037 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56037 - "GET /api/pruebas/notificaciones?celular=998877665 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56039 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56039 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56039 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56039 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56039 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56039 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56039 - "GET /api/pruebas/notificaciones?celular=998877665 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56041 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56041 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56041 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56041 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56041 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56041 - "GET /api/limites HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56041 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56041 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56043 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56043 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56043 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56043 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56043 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56043 - "GET /api/limites HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56043 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56043 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56045 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56045 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56045 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56045 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56045 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56045 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56045 - "GET /api/limites HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56045 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56045 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56047 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56047 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56047 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56047 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56047 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56049 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56049 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56049 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56049 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56049 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56051 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56051 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56051 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56051 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56051 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56053 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56053 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56053 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56053 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56053 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56055 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56055 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56055 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56055 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56055 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56055 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56057 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56057 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56057 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56057 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56057 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56057 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56059 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56059 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56059 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56059 - "POST /api/limites/alertas HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56061 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56061 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56061 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56061 - "POST /api/limites/alertas HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56063 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56063 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56063 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56063 - "POST /api/limites/alertas HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56065 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56065 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56065 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56065 - "POST /api/limites/alertas HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56067 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56067 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56067 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56067 - "POST /api/limites/alertas HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56069 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56069 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56069 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56069 - "POST /api/limites/alertas HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56071 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56071 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56071 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56071 - "POST /api/limites/alertas HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56073 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56073 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56073 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56073 - "POST /api/limites/alertas HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56075 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56075 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56075 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56075 - "POST /api/limites/alertas HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56077 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56077 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56077 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56077 - "POST /api/limites/alertas HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56079 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56079 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56079 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56079 - "POST /api/limites/alertas HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56081 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56081 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56081 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56081 - "POST /api/limites/alertas HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56083 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56083 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56083 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56083 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56083 - "POST /api/limites/alertas HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56083 - "POST /api/limites/alertas HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56083 - "POST /api/limites/alertas HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56083 - "POST /api/limites/alertas HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56083 - "POST /api/limites/alertas HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56085 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56085 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56085 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56085 - "PUT /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56085 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56085 - "PUT /api/limites/alertas/1 HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56087 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56087 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56087 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56087 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56087 - "GET /api/pruebas/notificaciones?celular=987654321 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56089 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56089 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56089 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56089 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56089 - "GET /api/pruebas/notificaciones?celular=987654321 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56091 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56091 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56091 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56091 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56091 - "GET /api/pruebas/notificaciones?celular=987654321 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56093 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56093 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56093 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56093 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56093 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56093 - "GET /api/pruebas/notificaciones?celular=987654321 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "PUT /api/limites/alertas/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56095 - "GET /api/pruebas/notificaciones?celular=987654321 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56097 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56097 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56099 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56099 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56099 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56099 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56099 - "DELETE /api/limites/alertas/1 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:56099 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56099 - "GET /api/pruebas/notificaciones?celular=987654321 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56101 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56101 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56101 - "GET /api/limites HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56103 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56103 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56103 - "PUT /api/limites HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56105 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56105 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56105 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56105 - "PUT /api/limites HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56105 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56107 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56107 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56107 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56107 - "PUT /api/limites HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56107 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56109 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56109 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56109 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56109 - "PUT /api/limites HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56109 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "PUT /api/limites HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56111 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56111 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56113 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56113 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56113 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56113 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56113 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56113 - "PUT /api/limites/alertas/1 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56113 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56113 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56115 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56115 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56115 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56115 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56115 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56115 - "DELETE /api/limites/alertas/1 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56115 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56115 - "GET /api/limites/alertas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56117 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56119 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56119 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56119 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56119 - "GET /api/cuentas/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56121 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56121 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56121 - "GET /api/cuentas/me/saldo HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56123 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56123 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56123 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56123 - "PUT /api/cuentas/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56123 - "GET /api/pruebas/notificaciones?celular=987654321 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56125 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56125 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56125 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56125 - "PUT /api/cuentas/me HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56127 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56127 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56127 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56127 - "PUT /api/cuentas/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56127 - "GET /api/cuentas/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56129 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56129 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56129 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56129 - "PUT /api/pruebas/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56129 - "POST /api/cuentas/me/cierre HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56131 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56131 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56131 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56131 - "PUT /api/pruebas/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56131 - "POST /api/cuentas/me/cierre HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56133 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56133 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56133 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56133 - "PUT /api/pruebas/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56133 - "POST /api/cuentas/me/cierre HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56135 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56135 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56135 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56135 - "PUT /api/pruebas/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56135 - "POST /api/cuentas/me/cierre HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:56137 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56137 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56137 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56137 - "PUT /api/pruebas/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56137 - "POST /api/cuentas/me/cierre HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:56137 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56137 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56139 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56139 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56139 - "POST /api/usuarios HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56139 - "GET /api/pruebas/notificaciones?celular=987000111 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56139 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56139 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56139 - "GET /api/limites HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56141 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56141 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56141 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56143 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56143 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56143 - "POST /api/usuarios HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56145 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56145 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56145 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56147 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56147 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56149 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56149 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56149 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56151 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56151 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56151 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56153 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56153 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56153 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56155 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56155 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56155 - "POST /api/usuarios HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56157 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56157 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56157 - "POST /api/usuarios HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56159 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56159 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56159 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56161 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56161 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56161 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56163 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56163 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56163 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56165 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56165 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56165 - "POST /api/usuarios HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56167 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56167 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56167 - "POST /api/usuarios HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56169 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56169 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56169 - "POST /api/usuarios HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56171 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56171 - "POST /api/usuarios HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56173 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56173 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56173 - "POST /api/usuarios HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56179 - "POST /api/usuarios HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1082, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 308, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 221, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 38, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/qolqe/api/autenticacion.py", line 81, in registrar
+    cursor = bd.execute(
+             ^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: usuarios.celular
+INFO:     127.0.0.1:56175 - "POST /api/usuarios HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1082, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 308, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 221, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 38, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/qolqe/api/autenticacion.py", line 81, in registrar
+    cursor = bd.execute(
+             ^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: usuarios.celular
+INFO:     127.0.0.1:56178 - "POST /api/usuarios HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 422, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/applications.py", line 1082, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 308, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/fastapi/routing.py", line 221, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 38, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kalosroots/qolqe-wallet/qolqe/api/autenticacion.py", line 81, in registrar
+    cursor = bd.execute(
+             ^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: usuarios.celular
+INFO:     127.0.0.1:56181 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56181 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56181 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56183 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56183 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56183 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56185 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56185 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56185 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56187 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56187 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56187 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56187 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56187 - "POST /api/auth/login HTTP/1.1" 423 Locked
+INFO:     127.0.0.1:56187 - "GET /api/pruebas/notificaciones?celular=912345678 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56189 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56189 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56189 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56189 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56189 - "POST /api/auth/login HTTP/1.1" 423 Locked
+INFO:     127.0.0.1:56189 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56189 - "POST /api/auth/login HTTP/1.1" 423 Locked
+INFO:     127.0.0.1:56191 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56191 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56191 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56191 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56191 - "POST /api/auth/login HTTP/1.1" 423 Locked
+INFO:     127.0.0.1:56191 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56191 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56193 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56193 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56193 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56193 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56193 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56193 - "POST /api/auth/login HTTP/1.1" 423 Locked
+INFO:     127.0.0.1:56195 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56195 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56195 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56197 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56197 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56197 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56197 - "POST /api/auth/logout HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:56197 - "GET /api/cuentas/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56199 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56199 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56199 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56199 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56199 - "POST /api/auth/logout HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:56199 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56201 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56201 - "GET /api/pruebas/notificaciones?celular=912345678 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56203 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56203 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56203 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56203 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56205 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56205 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56205 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56205 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56207 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56207 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56207 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56207 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56209 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56209 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56209 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56209 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56211 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56211 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56211 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56211 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56213 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56213 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56213 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56213 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56215 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56215 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56215 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56215 - "POST /api/transferencias HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56217 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56217 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56217 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56217 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56219 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56219 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56219 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56219 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56221 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56221 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56221 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56221 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56223 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56223 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56223 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56223 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56225 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56225 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56225 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56225 - "POST /api/transferencias HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:56227 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56227 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56227 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56227 - "POST /api/transferencias HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56229 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56229 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56229 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56229 - "GET /api/transferencias/comision?monto=50.00&tipo=INTERBANCARIA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56229 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56231 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56231 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56231 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56231 - "GET /api/transferencias/comision?monto=66.67&tipo=INTERBANCARIA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56231 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56233 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56233 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56233 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56233 - "GET /api/transferencias/comision?monto=100.00&tipo=INTERBANCARIA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56233 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56235 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56235 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56235 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56235 - "GET /api/transferencias/comision?monto=333.33&tipo=INTERBANCARIA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56235 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56237 - "POST /api/pruebas/reiniciar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56237 - "PUT /api/pruebas/reloj HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56237 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56237 - "GET /api/transferencias/comision?monto=400.00&tipo=INTERBANCARIA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56237 - "GET /api/cuentas/me/saldo HTTP/1.1" 200 OK

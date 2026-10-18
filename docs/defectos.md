@@ -199,4 +199,4 @@
 
 **Resultado obtenido:** uno 201 y los demás **500 Internal Server Error** sin `codigo` (5 de 5 intentos).
 
-**Evidencia:** log del servidor: `sqlite3.IntegrityError: UNIQUE constraint failed: usuarios.celular`; reporte `reportes/schemathesis/`.
+**Evidencia:** log del servidor: `sqlite3.IntegrityError: UNIQUE constraint failed: usuarios.celular` (tres veces en `docs/evidencia/playwright/log-servidor.txt`, durante el escenario `@DEF-09`).

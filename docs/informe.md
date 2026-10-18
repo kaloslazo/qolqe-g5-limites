@@ -63,7 +63,7 @@ npm run report                             # reporte HTML
 | "API accepted schema-violating request" (2) | `cci` con tipo incorrecto se ignora en transferencias QOLQE; `pin` fuera de patrón se procesa en login. Baja severidad |
 | "Invalid Allow header" (4) | Respuestas 405 a `OPTIONS` sin cabecera `Allow`. Baja severidad |
 
-Evidencia: `docs/evidencia/schemathesis-junit.xml` y `docs/evidencia/schemathesis-salida.txt` (cada corrida nueva queda en `reportes/`).
+Evidencia: `docs/evidencia/schemathesis/` (reporte HTML, JUnit y salida de la corrida del 17-oct, con la lectura de cada hallazgo en `docs/evidencia/README.md`) y `docs/evidencia/schemathesis-2026-10-16/` (corrida anterior). Cada corrida nueva queda en `reportes/schemathesis/`. El reporte de Playwright está en `docs/evidencia/playwright/`.
 
 ## 5. Defectos encontrados
 

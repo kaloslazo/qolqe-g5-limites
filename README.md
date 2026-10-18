@@ -76,10 +76,10 @@ El script no deja correr dos de estos comandos a la vez.
 
 | Qué | Dónde |
 |---|---|
-| Reporte HTML de Playwright | `playwright-report/index.html` |
-| JUnit de Playwright | `reportes/junit-api.xml` |
-| Reporte de Schemathesis | `reportes/schemathesis/` |
-| Evidencia de Schemathesis | `docs/evidencia/` |
+| **Evidencia de la última corrida** (reportes HTML, JUnit, salida y log) | `docs/evidencia/` (índice en `docs/evidencia/README.md`) |
+| Reporte HTML de Playwright | `docs/evidencia/playwright/reporte-html/index.html` · cada corrida nueva: `playwright-report/` |
+| JUnit de Playwright | `docs/evidencia/playwright/junit-api.xml` · cada corrida nueva: `reportes/junit-api.xml` |
+| Reporte HTML de Schemathesis | `docs/evidencia/schemathesis/reporte-html/index.html` · cada corrida nueva: `reportes/schemathesis/` |
 | Informe (secciones 1, 2 y 5) | `docs/informe.md` |
 | Defectos (DEF-01 a DEF-09) | `docs/defectos.md` |
 | Diapositivas | `docs/expo/index.html` y `docs/expo/G5-Limites-Parte1.pdf` |
