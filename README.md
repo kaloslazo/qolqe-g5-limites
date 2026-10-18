@@ -2,18 +2,11 @@
 
 [![Pruebas de API](https://github.com/kaloslazo/qolqe-g5-limites/actions/workflows/pruebas.yml/badge.svg)](https://github.com/kaloslazo/qolqe-g5-limites/actions/workflows/pruebas.yml)
 
-Proyecto 2 de CS5383 Pruebas y Verificación de Software (UTEC, 2026-2), Parte 1. Grupo 5: Kalos · Gianpier.
-
-Probamos por API el módulo **G5 · Límites y alertas de consumo** y el núcleo común de Qolqe Wallet. Los casos están escritos en Gherkin (`features/`) y se ejecutan con **Playwright Test + playwright-bdd** (`tests/api-playwright/`). El contrato OpenAPI se prueba con **Schemathesis**. La app de la profesora está en `qolqe/` y no se modifica.
+Grupo 5: Kalos · Gianpier. Pruebas del módulo G5 y del núcleo con Playwright + playwright-bdd, y contrato con Schemathesis. La app (`qolqe/`) no tiene cambios.
 
 ## Requisitos
 
-- Python 3.11 o superior (recomendado 3.12)
-- Node.js 20 o superior
-- Git
-- En Windows, Git Bash para los scripts `.sh` (`npm run contrato` y `scripts/demo.sh`)
-
-No hace falta `npx playwright install`: son pruebas de API y no usan navegador.
+Python 3.11 o superior, Node.js 20 o superior y Git.
 
 ## Instalación
 
@@ -26,70 +19,32 @@ pip install -r requirements-pruebas.txt
 npm install
 ```
 
-## Ejecutar las pruebas
+## Pruebas
 
 ```bash
-npm test                                  # los 108 escenarios (genera los tests y levanta la app sola)
-npx playwright test --grep @HU-G5-02      # una historia de usuario
-npx playwright test --grep @tecnico       # solo los casos técnicos
-npx playwright test --grep @DEF           # solo los escenarios que detectan defectos
-npx playwright show-report                # reporte HTML (Ctrl+C para cerrarlo)
+npm test
+npx playwright show-report
 ```
 
-Resultado esperado: **`107 passed, 1 skipped`**, en unos 20 segundos.
+`npm test` levanta la app y corre los 108 escenarios. Resultado esperado: `107 passed, 1 skipped`. Los escenarios `@fail` detectan los defectos de `docs/defectos.md` y cuentan como passed; el omitido es de rendimiento (Parte 3).
 
-- Los escenarios etiquetados `@DEF-xx @fail` detectan un defecto: Playwright los marca como fallo esperado y cuentan como *passed* mientras el defecto exista. Si el defecto se corrige, ese escenario se pone en rojo.
-- El escenario `@rendimiento @skip` (transferencias simultáneas) queda para la Parte 3.
-- `npm test` levanta la app con `.venv/bin/python -m uvicorn` (en Windows, `.venv\Scripts\python`). Si ya hay una app en el puerto 8000, la reutiliza. `PYTHON` cambia el intérprete, `QOLQE_PUERTO` el puerto y `QOLQE_URL` apunta a una app ya levantada.
-- Los escenarios comparten una base de datos y un reloj, así que corren en serie (`workers: 1`). Cada uno reinicia los datos y fija el reloj en su `Background`.
+## Contrato
 
-## Contrato con Schemathesis
-
-Con la app levantada en otra terminal y el `.venv` activo:
+En una terminal se levanta la app y en otra se corre el contrato, ambas con el `.venv` activo (en Windows, desde Git Bash):
 
 ```bash
-uvicorn qolqe.main:app --port 8000        # terminal 1
-npm run contrato                          # terminal 2
+uvicorn qolqe.main:app --port 8000     # terminal 1
+npm run contrato                       # terminal 2
 ```
 
-Deja el reporte en `reportes/schemathesis/` (`html-<fecha>/index.html` y JUnit). Que marque *Failed* es esperado: la mayoría de los avisos son reglas de negocio que el OpenAPI no declara (múltiplos de 50, montos mayores a 0, PIN no repetido). La lectura de cada aviso está en `docs/informe.md`.
+El reporte queda en `reportes/schemathesis/`. No correr `npm test` y `npm run contrato` al mismo tiempo.
 
-No corras `npm test` y `npm run contrato` al mismo tiempo: comparten la base y el reloj, y se interfieren.
+## Contenido
 
-## Demo
-
-`scripts/demo.sh` (macOS, Linux o Git Bash) agrupa los pasos de la exposición:
-
-| Comando | Qué hace |
-|---|---|
-| `./scripts/demo.sh todo` | Corre los 108 escenarios, deja los datos limpios y abre el reporte |
-| `./scripts/demo.sh contrato` | Corre Schemathesis y abre su reporte HTML |
-| `./scripts/demo.sh def06` | Reproduce DEF-06: una transferencia a una cuenta cerrada responde 201 |
-| `./scripts/demo.sh suite @HU-G5-02` | Corre solo una etiqueta |
-| `./scripts/demo.sh app` | Levanta la app en el puerto 8000 en segundo plano |
-| `./scripts/demo.sh reiniciar` | Restaura los datos semilla y la hora real |
-| `./scripts/demo.sh parar` | Detiene la app y el reporte |
-
-El script no deja correr dos de estos comandos a la vez.
-
-## Reportes y documentos
-
-| Qué | Dónde |
-|---|---|
-| **Evidencia de la última corrida** (reportes HTML, JUnit, salida y log) | `docs/evidencia/` (índice en `docs/evidencia/README.md`) |
-| Reporte HTML de Playwright | `docs/evidencia/playwright/reporte-html/index.html` · cada corrida nueva: `playwright-report/` |
-| JUnit de Playwright | `docs/evidencia/playwright/junit-api.xml` · cada corrida nueva: `reportes/junit-api.xml` |
-| Reporte HTML de Schemathesis | `docs/evidencia/schemathesis/reporte-html/index.html` · cada corrida nueva: `reportes/schemathesis/` |
-| Informe (secciones 1, 2 y 5) | `docs/informe.md` |
-| Defectos (DEF-01 a DEF-09) | `docs/defectos.md` |
-| Diapositivas | `docs/expo/index.html` y `docs/expo/G5-Limites-Parte1.pdf` |
-| Pipeline | `.github/workflows/pruebas.yml` (sube los reportes como artefacto) |
-
-## Resultados
-
-108 escenarios: 49 del módulo G5 (8 de ellos técnicos) y 59 del núcleo. 97 pasan, 10 detectan 9 defectos y 1 queda para la Parte 3. Los defectos críticos son DEF-02 (las interbancarias no cuentan para el límite diario), DEF-04 (el saldo puede quedar negativo por la comisión) y DEF-06 (se puede transferir a una cuenta cerrada).
-
-`requirements-pruebas.txt` fija FastAPI por debajo de 0.118. Desde esa versión, la app guarda los cambios después de enviar la respuesta, y en el runner de CI la solicitud siguiente a veces no veía lo recién guardado.
+- `features/`: escenarios en Gherkin
+- `tests/api-playwright/`: pasos en TypeScript
+- `docs/informe.md` y `docs/defectos.md`
+- `docs/evidencia/`: reportes de la última corrida
 
 ---
 
